@@ -44,6 +44,8 @@ Mini API REST desenvolvida com Spring Boot para processamento de assinaturas de 
   "message": "Assinatura processada com sucesso"
 }
 
+```
+
 ## ⚠️ Validações
 
 - customerName é obrigatório
