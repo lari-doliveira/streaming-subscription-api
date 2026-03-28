@@ -23,7 +23,7 @@ Mini API REST desenvolvida com Spring Boot para processamento de assinaturas de 
 
 ## 🔧 Endpoint
 
-### POST /subscriptions/process
+### POST/subscriptions/process
 
 ### Exemplo de requisição
 
@@ -63,3 +63,8 @@ Mini API REST desenvolvida com Spring Boot para processamento de assinaturas de 
 
 ## 📚 Objetivo
 Projeto desenvolvido para prática de construção de APIs backend com Spring Boot e boas práticas de arquitetura.
+
+## ▶️ Como executar
+
+```bash
+./mvnw spring-boot:run
