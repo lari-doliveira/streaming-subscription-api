@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processar Assinatura</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Processamento de Assinatura</h1>
+        <p>Preencha os dados e envie para a API.</p>
+
+        <form id="subscription-form">
+            <div class="form-group">
+              <label for="customerName">Nome do cliente</label>  
+              <input type="text" id="customerName" name="customerName" required> 
+            </div>
+
+            <div class="form-group">
+                <label for="planType">Tipo do plano</label>
+                <input type="text" id="planType" name="planType" required>
+            </div>
+
+            <div class="form-group">
+                <label for="months">Meses</label>
+                <input type="number" id="months" name="months" required>
+            </div>
+
+            <div class="form-group">
+                <label for="monthlyPrice">Preço mensal</label>
+                <input type="number" id="monthlyPrice" name="monthlyPrice" step="0.01" required>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <section class="response-area">
+            <h2>Resposta da API</h2>
+            <div id="result" class="result-box"></div>
+            <p id="error-message" class="error-text"></p>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

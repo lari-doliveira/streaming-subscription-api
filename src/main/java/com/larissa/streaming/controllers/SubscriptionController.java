@@ -3,6 +3,7 @@ package com.larissa.streaming.controllers;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.larissa.streaming.dto.SubscriptionRequest;
@@ -15,6 +16,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/subscriptions")
+@CrossOrigin(origins = "*")
 public class SubscriptionController {
 
     private final SubscriptionService subscriptionService;
