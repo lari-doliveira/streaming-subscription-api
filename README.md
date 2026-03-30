@@ -1,70 +1,84 @@
-# Streaming Subscription API
+# 📦 Subscription System
 
-Mini API REST desenvolvida com Spring Boot para processamento de assinaturas de streaming.
+Aplicação full stack para processamento de assinaturas.
 
-## 🚀 Tecnologias
+---
 
+## 🚀 Visão geral
+
+Este projeto consiste em uma API REST desenvolvida com Spring Boot e um frontend em JavaScript puro que consome essa API.
+
+O sistema permite processar assinaturas com validação de dados e cálculo de valor final com base no plano escolhido.
+
+---
+
+## 🛠 Tecnologias
+
+### Backend
 - Java
 - Spring Boot
-- Maven
+- API REST
+
+### Frontend
+- HTML
+- CSS
+- JavaScript (Vanilla)
+- Fetch API
 
 ---
 
-## 📌 Funcionalidades
+## ⚙️ Funcionalidades
 
 - Processamento de assinatura
-- Suporte a planos `BASIC` e `PREMIUM`
-- Cálculo de valor final com regras por tipo de plano
-- Validação de dados com annotations (`@Valid`)
-- Tratamento global de erros
-- Resposta em JSON
+- Validação de campos obrigatórios
+- Tratamento de erros (400 / 500)
+- Cálculo de valor final
+- Feedback visual de sucesso e erro
+- Integração frontend ↔ backend
 
 ---
 
-## 🔧 Endpoint
+## 🔗 Endpoint
 
-### POST/subscriptions/process
-
-### Exemplo de requisição
-
-```json
-{
-  "customerName": "Larissa",
-  "planType": "PREMIUM",
-  "monthlyPrice": 59.90,
-  "months": 3
-}
-
-### Exemplo de resposta
-
-{
-  "customerName": "Larissa",
-  "planType": "PREMIUM",
-  "finalAmount": 161.73,
-  "message": "Assinatura processada com sucesso"
-}
-
+```http
+POST /subscriptions/process
 ```
 
-## ⚠️ Validações
+🌐 Frontend
+O frontend está localizado na pasta:
+/frontend
 
-- customerName é obrigatório
-- planType deve ser BASIC ou PREMIUM
-- monthlyPrice deve ser maior que zero
-- months deve ser maior que zero
+Ele consome a API e exibe:
+✅ Sucesso (card verde)
+❌ Erro (card vermelho)
+💬 Mensagens amigáveis para o usuário
 
-## 🧠 Conceitos praticados
-- API REST
-- Controller / Service / DTO
-- Enum (PlanType)
-- Strategy Pattern (PlanPolicy)
-- Validação com @Valid
-- Exception Handling com @RestControllerAdvice
+📸 Interface
+- Form
+![preview](./frontend/form.png)
+- Sucesso
+![preview](./frontend/sucesso.png)
 
-## 📚 Objetivo
-Projeto desenvolvido para prática de construção de APIs backend com Spring Boot e boas práticas de arquitetura.
+▶️ Como rodar o projeto
 
-## ▶️ Como executar
-
-```bash
+Backend
 ./mvnw spring-boot:run
+Rodará em:
+http://localhost:8080
+
+Frontend
+Abra o arquivo:
+frontend/index.html
+Ou utilize uma extensão como Live Server.
+
+💡 Destaques técnicos
+- Tratamento de CORS no backend
+- Uso de async/await no frontend
+- Parsing de respostas JSON
+- Separação de responsabilidades (Controller / Service)
+- Feedback visual orientado à experiência do usuário
+
+📌 Status
+Projeto concluído como exercício prático de integração frontend + backend.
+
+
