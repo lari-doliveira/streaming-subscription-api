@@ -45,14 +45,15 @@ POST /subscriptions/process
 ```
 
 🌐 Frontend
-O frontend está localizado na pasta:
+
+O frontend está localizado na pasta:  
 /frontend
 
 Ele consome a API e exibe:  
 
-✅ Sucesso (card verde)
-❌ Erro (card vermelho)
-💬 Mensagens amigáveis para o usuário
+- Sucesso (card verde)
+- Erro (card vermelho)
+- Mensagens amigáveis para o usuário
 
 📸 Interface
 - Form
@@ -62,21 +63,26 @@ Ele consome a API e exibe:
 
 ## ▶️ Como rodar o projeto
 
-### Backend
+### 🔧 Backend
+
+Execute o comando:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Rodará em:
+A aplicação estará disponível em: 
 http://localhost:8080
 
-### Frontend 
+### 🌐 Frontend 
 
 Abra o arquivo:  
-frontend/index.html  
 
-Ou utilize uma extensão como Live Server.
+```bash
+frontend/index.html
+``` 
+
+Ou utilize uma extensão como Live Server para melhor experiência. 
 
 💡 Destaques técnicos
 - Tratamento de CORS no backend
