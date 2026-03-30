@@ -57,9 +57,15 @@ Ele consome a API e exibe:
 
 📸 Interface
 - Form
-![preview](./frontend/form.png)
+  
+![form](./frontend/form.png)
+
 - Sucesso
-![preview](./frontend/sucesso.png)
+  
+![sucesso](./frontend/sucesso.png)
+
+- Erro 
+![erro](./frontend/erro.png)
 
 ## ▶️ Como rodar o projeto
 
@@ -92,6 +98,6 @@ Ou utilize uma extensão como Live Server para melhor experiência.
 - Feedback visual orientado à experiência do usuário
 
 📌 Status
-Projeto concluído como exercício prático de integração frontend + backend.
+Projeto desenvolvido para demonstrar integração completa entre frontend e backend, incluindo validação, tratamento de erros e experiência do usuário.
 
 
